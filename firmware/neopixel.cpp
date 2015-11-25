@@ -233,8 +233,8 @@ void Adafruit_NeoPixel::show(void) {
     while(i) { // While bytes left... (3 bytes = 1 pixel)
       mask = 0x800000; // reset the mask
       i = i-3;      // decrement bytes remaining
-      g = *ptr++;   // Next green byte value
-      r = *ptr++;   // Next red byte value
+      r = *ptr++;   // Next green byte value
+      g = *ptr++;   // Next red byte value
       b = *ptr++;   // Next blue byte value
       c = ((uint32_t)g << 16) | ((uint32_t)r <<  8) | b; // Pack the next 3 bytes to keep timing tight
       j = 0;        // reset the 24-bit counter
